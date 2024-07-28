@@ -2,7 +2,7 @@
 
 # Spotify Downloader Bot
 
-[DEMO VERSION @Spotify_downloa_bot](https://t.me/Spotify_downloa_bot)
+[DEMO VERSION  @z_downloadbot ](https://t.me/Zpotify1_bot)
 
 ## Introduction
 > Yes, this repository is still maintained, and new features will be added over time.
@@ -16,7 +16,7 @@
 ![Add Python in Heroku](https://github.com/Masterolic/Spotify-Downloader/assets/93469093/6a0c1c9c-4c91-4bac-b6fb-0a40d5516e3c)
 
 ### Why do I get a 403 Forbidden error in my logs?
-> Your VPS/Local Server might be blocked by YouTube. Try changing the IP address or using a proxy by filling the `FIXIE_SOCKS_HOST` variable, changing the location, or using cookies. Add this line ["cookiefile":"path"](https://github.com/Masterolic/Spotify-Downloader/blob/fe859965e62a5ca8f29fc69185cd132d456e4bfd/mbot/utils/mainhelper.py#L144) where `path` is defined as where your cookie file is. Refer [here](https://www.reddit.com/r/youtubedl/wiki/cookies/) for more details.
+> Your VPS/Local Server might be blocked by YouTube. Try changing the IP address or using a proxy by filling the `FIXIE_SOCKS_HOST` variable, changing the location, or using cookies. Add this line ["cookiefile":"path"](https://github.com/zasasamar2129/zpotify/blob/fe859965e62a5ca8f29fc69185cd132d456e4bfd/mbot/utils/mainhelper.py#L144) where `path` is defined as where your cookie file is. Refer [here](https://www.reddit.com/r/youtubedl/wiki/cookies/) for more details.
 
 ## Note
 > This is the old repository of [@Spotify_downloa_bot](https://t.me/Spotify_downloa_bot), so it may be buggy and lack some features. However, it will still be maintained and updated with new features as they are developed.
@@ -35,7 +35,7 @@
 ## Deployment
 
 ### Easy way to deploy on Local/VPS
-1. First, add variables in [config.env](https://github.com/Masterolic/Spotify-Downloader/blob/Latest/config.env):
+1. First, add variables in [config.env](https://github.com/zasasamar2129/zpotify/blob/Latest/config.env):
    ```sh
    apt update && apt upgrade -y 
    apt install git ffmpeg python3 python3-pip -y
@@ -55,7 +55,7 @@
 
 
 ## Config Example
-Add these variables in [config.env](https://github.com/Masterolic/Spotify-Downloader/blob/Latest/config.env):
+Add these variables in [config.env](https://github.com/zasasamar2129/zpotify/blob/Latest/config.env):
 
 ### Required Environment Variables
 
