@@ -12,11 +12,11 @@
 ### Why are audio files not sending?
 > Make sure that FFMpeg is installed! Check the logs for more details. See the image below to add FFMpeg if you are using Heroku.
 
-![Add FFMpeg in Heroku](https://github.com/zasasamar2129/zpotify1assets/93469093/0fbe0591-771a-460b-be69-3fb60536d44d)
-![Add Python in Heroku](https://github.com/zasasamar2129/zpotify1assets/93469093/6a0c1c9c-4c91-4bac-b6fb-0a40d5516e3c)
+![Add FFMpeg in Heroku](https://github.com/zasasamar2129/zpotify1/assets/93469093/0fbe0591-771a-460b-be69-3fb60536d44d)
+![Add Python in Heroku](https://github.com/zasasamar2129/zpotify1/assets/93469093/6a0c1c9c-4c91-4bac-b6fb-0a40d5516e3c)
 
 ### Why do I get a 403 Forbidden error in my logs?
-> Your VPS/Local Server might be blocked by YouTube. Try changing the IP address or using a proxy by filling the `FIXIE_SOCKS_HOST` variable, changing the location, or using cookies. Add this line ["cookiefile":"path"](https://github.com/zasasamar2129/zpotify1blob/fe859965e62a5ca8f29fc69185cd132d456e4bfd/mbot/utils/mainhelper.py#L144) where `path` is defined as where your cookie file is. Refer [here](https://www.reddit.com/r/youtubedl/wiki/cookies/) for more details.
+> Your VPS/Local Server might be blocked by YouTube. Try changing the IP address or using a proxy by filling the `FIXIE_SOCKS_HOST` variable, changing the location, or using cookies. Add this line ["cookiefile":"path"](https://github.com/zasasamar2129/zpotify1/blob/fe859965e62a5ca8f29fc69185cd132d456e4bfd/mbot/utils/mainhelper.py#L144) where `path` is defined as where your cookie file is. Refer [here](https://www.reddit.com/r/youtubedl/wiki/cookies/) for more details.
 
 ## Note
 > This is the old repository of [@z_downloadbot](https://t.me/z_downloadbot), so it may be buggy and lack some features. However, it will still be maintained and updated with new features as they are developed.
@@ -139,7 +139,7 @@ F_SUB_CHANNEL_INVITE_LINK = ""
 
 ## Donation
 > Please support me by buying me a pizza using the link below:
-[Buy Me A Pizza](https://www.buymeacoffee.com/)
+[Buy Me A Pizza](https://www.buymeacoffee.com/zasasamar)
 
 ## Feedback
 > Rate our bot [FEEDBACK](https://t.me/dailychannelsbot?start=z_downloadbot)
