@@ -220,7 +220,7 @@ async def search(Mbot: Mbot, query: CallbackQuery):
         try:
             await query.message.reply_text(f"Done✅",   
          reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Feedback", callback_data="feed")]]))
-            await query.message.reply_text(f"Check out @spotify_downloa_bot(music)  @spotifynewss(News)")
+            await query.message.reply_text(f"Check out @z_downloadbot(music)  @Zpotify1(News)")
         except:
             pass     
 
@@ -232,7 +232,7 @@ async def refresh(Mbot, query):
           except Exception:
              return 
           try:
-              get_member = await Mbot.get_chat_member(chat_id=-1001797516752,user_id=user_id)
+              get_member = await Mbot.get_chat_member(chat_id=-1001986775135,user_id=user_id)
           except UserNotParticipant:
               try:
                   await query.answer("Please Join The Channel",show_alert=True)
@@ -242,7 +242,7 @@ async def refresh(Mbot, query):
           except PeerIdInvalid:
               try:
                   await Mbot.send_chat_action(chat_id=user_id,action=enums.ChatAction.TYPING)
-                  get_member = await Mbot.get_chat_member(chat_id=-1001797516752,user_id=user_id)
+                  get_member = await Mbot.get_chat_member(chat_id=-1001986775135,user_id=user_id)
               except PeerIdInvalid:
                   pass
               except UserIsBlocked:
