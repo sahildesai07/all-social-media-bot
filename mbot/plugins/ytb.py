@@ -160,11 +160,11 @@ async def _(Mbot,message):
             await m.delete()
             if LOG_GROUP:
                await Mbot.send_message(LOG_GROUP,f"YouTube Shorts {e} {link}")
-               await message.reply(f"400: Sorry, Unable To Find It  try another or report it  to @masterolic or support chat @spotify_supportbot 🤖  ")
+               await message.reply(f"400: Sorry, Unable To Find It  try another or report it  to @Itachi2129 or support chat @zunknoebot 🤖  ")
                print(traceback.format_exc())
                await Mbot.send_message(LOG_GROUP, traceback.format_exc())
                
-        return await message.reply("Check out @spotify_downloa_bot(music)  @spotifynewss(Channel) \n Please Support Us By /donate To Maintain This Project")
+        return await message.reply("Check out @z_downloadbot(music)  @Zpotify1(Channel) \n Please Support Us By /donate To Maintain This Project")
     try:
         ids = await getIds(message.matches[0].group(0))
         videoInPlaylist = len(ids)
