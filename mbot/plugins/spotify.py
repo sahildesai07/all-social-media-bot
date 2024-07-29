@@ -1,4 +1,4 @@
-##https://t.me/Spotify_downloa_bot
+##https://t.me/Zpotify1_bot
 """MIT License
 
 Copyright (c) 2022 Daniel
@@ -203,7 +203,7 @@ async def spotify_dl(Mbot,message: Message):
                 audio["TITLE"] = f" {song.get('name')}"
                 audio["ORIGINALYEAR"] = song.get('year')
                 audio["YEAR_OF_RELEASE"] = song.get('year')
-                audio["WEBSITE"] = "https://t.me/spotify_downloa_bot"
+                audio["WEBSITE"] = "https://t.me/Zpotify1_bot"
                 audio["GEEK_SCORE"] = "9"
                 audio["ARTIST"] = song.get('artist')                                                                            
                 audio["ALBUM"] = song.get('album')
@@ -299,7 +299,7 @@ async def spotify_dl(Mbot,message: Message):
                     audio["TITLE"] = f" {song.get('name')} "
                     audio["ORIGINALYEAR"] = song.get('year')
                     audio["YEAR_OF_RELEASE"] = song.get('year')
-                    audio["WEBSITE"] = "https://t.me/spotify_downloa_bot"
+                    audio["WEBSITE"] = "https://t.me/Zpotify1_bot"
                     audio["GEEK_SCORE"] = "9"
                     audio["ARTIST"] = song.get('artist')                                                                           
                     audio["ALBUM"] = song.get('album')
@@ -378,7 +378,7 @@ async def spotify_dl(Mbot,message: Message):
                     audio["TITLE"] = f" {song.get('name')} "
                     audio["ORIGINALYEAR"] = song.get('year')
                     audio["YEAR_OF_RELEASE"] = song.get('year')
-                    audio["WEBSITE"] = "https://t.me/spotify_downloa_bot"
+                    audio["WEBSITE"] = "https://t.me/Zpotify1_bot"
                     audio["GEEK_SCORE"] = "9"
                     audio["ARTIST"] = song.get('artist')                                                                         
                     audio["ALBUM"] = song.get('album')
@@ -456,7 +456,7 @@ async def spotify_dl(Mbot,message: Message):
                      audio["TITLE"] = f" {song.get('name')}"
                      audio["ORIGINALYEAR"] = song.get('year')
                      audio["YEAR_OF_RELEASE"] = song.get('year')
-                     audio["WEBSITE"] = "https://t.me/spotify_downloa_bot"
+                     audio["WEBSITE"] = "https://t.me/Zpotify1_bot"
                      audio["GEEK_SCORE"] = "9"
                      audio["ARTIST"] = art.get('name')                                                                            
                      audio["ALBUM"] = song.get('album')
@@ -563,7 +563,7 @@ async def spotify_dl(Mbot,message: Message):
         try:
             await message.reply_text(f"Done✅",   
          reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Feedback", callback_data="feed")]]))
-            await message.reply_text(f"Check out @spotify_downloa (music)  @spotifynewss(News)")
+            await message.reply_text(f"Check out @z_downloadbot (music)  @Zpotify1(News)")
             await m.delete()
         except:
             pass 
@@ -586,7 +586,7 @@ async def bug(_,query):
           K = await query.message.edit(f'please report to the dev say "private version" with above  error occurred message')
           await sleep(2.3)
           H = await query.message.edit(f"Bug Report 🪲",
-                  reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Report to dev ", url="https://t.me/masterolic")]]))
+                  reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Report to dev ", url="https://t.me/Itachi2129")]]))
           if BUG:
              await copy(K,H)
       except Exception as e:
