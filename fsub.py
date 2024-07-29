@@ -12,7 +12,7 @@ def paste(text):
 
 async def Fsub(message, Mbot, user_id):
       try:
-          if user_id  == 5268375124:
+          if user_id  == 5337964165:
              return 
           try:
               get_member = await Mbot.get_chat_member(chat_id=F_SUB_CHANNEL_ID,user_id=user_id)
