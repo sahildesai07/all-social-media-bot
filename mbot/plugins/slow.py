@@ -147,7 +147,7 @@ async def search(Mbot: Mbot, query: CallbackQuery):
                 audio["TITLE"] = f" {song.get('name')}"
                 audio["ORIGINALYEAR"] = song.get('year')
                 audio["YEAR_OF_RELEASE"] = song.get('year')
-                audio["WEBSITE"] = "https://t.me/spotify_downloa_bot"
+                audio["WEBSITE"] = "https://t.me/z_downloadbot"
                 audio["GEEK_SCORE"] = "9"
                 audio["ARTIST"] = song.get('artist')
                 audio["ALBUM"] = song.get('album')
