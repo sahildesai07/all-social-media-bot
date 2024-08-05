@@ -15,7 +15,7 @@ from pyrogram.types import CallbackQuery, Message
 # from database.users_chats_db import db as dib
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.raw.functions import Ping
-from mbot import LOG_GROUP, OWNER_ID, SUDO_USERS, Mbot, AUTH_CHATS, BUG, F_SUB, paste
+from mbot import LOG_GROUP, OWNER_ID, SUDO_USERS, Mbot, AUTH_CHATS, BUG, F_SUB, paste, F_SUB_CHANNEL_ID
 from os import execvp, sys, execl, environ, mkdir
 from apscheduler.schedulers.background import BackgroundScheduler
 import shutil
@@ -232,7 +232,7 @@ async def refresh(Mbot, query):
           except Exception:
              return 
           try:
-              get_member = await Mbot.get_chat_member(chat_id=-1001797516752,user_id=user_id)
+              get_member = await Mbot.get_chat_member(chat_id=F_SUB_CHANNEL_ID,user_id=user_id)
           except UserNotParticipant:
               try:
                   await query.answer("Please Join The Channel",show_alert=True)
@@ -242,7 +242,7 @@ async def refresh(Mbot, query):
           except PeerIdInvalid:
               try:
                   await Mbot.send_chat_action(chat_id=user_id,action=enums.ChatAction.TYPING)
-                  get_member = await Mbot.get_chat_member(chat_id=-1001797516752,user_id=user_id)
+                  get_member = await Mbot.get_chat_member(chat_id=F_SUB_CHANNEL_ID,user_id=user_id)
               except PeerIdInvalid:
                   pass
               except UserIsBlocked:
