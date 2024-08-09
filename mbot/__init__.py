@@ -24,11 +24,17 @@ SOFTWARE.
 from pyrogram import Client
 from os import environ,sys,mkdir,path
 import logging
+import requests
+from flask import Flask
+from threading import Thread
+import pytz
+import time
+from apscheduler.schedulers.background import BackgroundScheduler
 from sys import executable
 #from Python_ARQ import ARQ
 from aiohttp import ClientSession
 from dotenv import load_dotenv
-import shutil
+import shutil 
 load_dotenv("config.env")
 import os 
 # Log
@@ -49,7 +55,7 @@ except KeyError:
     LOGGER.debug("One or More ENV variable not found.")
     sys.exit(1)
 # Optional Variable
-F_SUB = environ['F_SUB']
+F_SUB = environ.get('F_SUB',False)
 F_SUB_CHANNEL_ID = environ.get('F_SUB_CHANNEL_ID')
 F_SUB_CHANNEL_INVITE_LINK = environ.get('F_SUB_CHANNEL_INVITE_LINK')
 SUDO_USERS = environ.get("SUDO_USERS",str(OWNER_ID)).split()
@@ -79,6 +85,20 @@ if genius_api:
 #    print(f"python arq key is not a valid string skiping it ...! Reason:{e}")
 #   aiohttpsession = ClientSession()
 #    arq = None
+def paste(text):
+    try:
+        url = "https://spaceb.in/api/"
+        res = requests.post(url, json={"content": text, "extension": "txt"})
+        return f"https://spaceb.in/{res.json()['payload']['id']}"
+    except Exception:
+        url = "https://dpaste.org/api/"
+        data={'format': 'json',
+            'content': text.encode('utf-8'),
+            'lexer': 'python',
+            'expires': '604800', #expire in week
+            }
+        res = requests.post(url,data=data)
+        return res.json()["url"]
     
 class Mbot(Client):
     def  __init__(self):
@@ -101,9 +121,43 @@ class Mbot(Client):
         if not path.exists('/tmp/thumbnails/'):
             mkdir('/tmp/thumbnails/')
         for chat in AUTH_CHATS:
-            await self.send_photo(chat,"https://telegra.ph/file/97bc8a091ac1b119b72e4.jpg","**Spotify Downloa Started**")
+            await self.send_photo(chat,"https://telegra.ph/file/97bc8a091ac1b119b72e4.jpg","**Spotify Download Started**")
         LOGGER.info(f"Bot Started As {BOT_INFO.username}\n")
     
     async def stop(self,*args):
         await super().stop()
         LOGGER.info("Bot Stopped, Bye.")
+        
+
+# =============================[ UPTIME ISSUE FIXED ]================================#
+
+
+RENDER_EXTERNAL_URL = environ.get("RENDER_EXTERNAL_URL", "http://localhost:5000")
+
+def ping_self():
+    url = f"{RENDER_EXTERNAL_URL}/alive"
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            logging.info("Ping successful!")
+        else:
+            logging.error(f"Ping failed with status code {response.status_code}")
+    except Exception as e:
+        logging.error(f"Ping failed with exception: {e}")
+
+def start_scheduler():
+    scheduler = BackgroundScheduler(timezone=pytz.utc)
+    scheduler.add_job(ping_self, 'interval', minutes=3)
+    scheduler.start()
+
+app = Flask(__name__)
+
+@app.route('/alive')
+def alive():
+    return "I am alive!"
+
+def run_flask():
+    app.run(host='0.0.0.0', port=10000)
+
+Thread(target=run_flask).start()
+start_scheduler()
