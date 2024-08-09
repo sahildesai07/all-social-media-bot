@@ -64,14 +64,14 @@ genius = Genius("api_key")
 #     await foo(c, m, cb=True)
 
 ##  & filters.private add this to respond only in private Chat
-@Mbot.on_message(filters.incoming & filters.text, group=-2)
+@Mbot.on_message(filters.incoming & filters.text, group=-3)
 async def _(c, m):
     message = m
     Mbot = c
     try:
         user_id = message.from_user.id
     except:
-        user_id = 5268375124
+        user_id = 5337964165
     if not m.text:
         return
     try:
