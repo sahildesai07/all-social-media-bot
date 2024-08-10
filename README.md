@@ -40,7 +40,7 @@
    apt update && apt upgrade -y 
    apt install git ffmpeg python3 python3-pip -y
    git clone https://github.com/zasasamar2129/zpotify1.git 
-   cd /zpotify1/
+   cd zpotify1
    pip3 install -r requirements.txt 
    python3 -m mbot 
    ```
