@@ -37,8 +37,8 @@
 ### Easy way to deploy on Local/VPS
 1. First, add variables in [config.env](https://github.com/zasasamar2129/zpotify1/blob/Latest/config.env):
    ```sh
-   apt update && apt upgrade -y 
-   apt install git ffmpeg python3 python3-pip -y
+   sudo apt update && apt upgrade -y 
+   sudo apt install git ffmpeg python3 python3-pip -y
    git clone https://github.com/zasasamar2129/zpotify1.git 
    cd zpotify1
    pip3 install -r requirements.txt 
