@@ -4,30 +4,6 @@
 
 [DEMO VERSION @z_downloadbot](https://t.me/z_downloadbot)
 
-## Introduction
-> Yes, this repository is still maintained, and new features will be added over time.
-
-## Common Issues
-
-### Why are audio files not sending?
-> Make sure that FFMpeg is installed! Check the logs for more details. See the image below to add FFMpeg if you are using Heroku.
-
-![Add FFMpeg in Heroku](https://github.com/zasasamar2129/zpotify1/assets/93469093/0fbe0591-771a-460b-be69-3fb60536d44d)
-![Add Python in Heroku](https://github.com/zasasamar2129/zpotify1/assets/93469093/6a0c1c9c-4c91-4bac-b6fb-0a40d5516e3c)
-
-### Why do I get a 403 Forbidden error in my logs?
-> Your VPS/Local Server might be blocked by YouTube. Try changing the IP address or using a proxy by filling the `FIXIE_SOCKS_HOST` variable, changing the location, or using cookies. Add this line ["cookiefile":"path"](https://github.com/zasasamar2129/zpotify1/blob/fe859965e62a5ca8f29fc69185cd132d456e4bfd/mbot/utils/mainhelper.py#L144) where `path` is defined as where your cookie file is. Refer [here](https://www.reddit.com/r/youtubedl/wiki/cookies/) for more details.
-
-## Note
-> This is the old repository of [@z_downloadbot](https://t.me/z_downloadbot), so it may be buggy and lack some features. However, it will still be maintained and updated with new features as they are developed.
-
-## Technical Details
-
-### Which language and Telegram API are used?
-> This bot is created using Python and the pyrogram library for Telegram.
-
-### Why is this open source?
-> I don't own this repo; this is an edited version of [@NeedMusicRobot](https://t.me/NeedMusicRobot).
 
 ### Is this source code used for [@z_downloadbot](https://t.me/z_downloadbot)?
 > No, this [bot](https://github.com/rozari0/NeedMusicRobot) was the inspiration to build our bot. You can see our bot is entirely different, and some features will be implemented in this repository.
