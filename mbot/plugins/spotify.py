@@ -1,4 +1,4 @@
-##https://t.me/Zpotify1_bot
+##https://t.me/Spotify_downloa_bot
 """MIT License
 
 Copyright (c) 2022 Daniel
@@ -67,7 +67,7 @@ LOG_TEXT_P = """
 ID - <code>{}</code>
 Name - {}
 """
-@Mbot.on_message(filters.incoming & filters.regex(r'https?://open.spotify.com[^\s]+') | filters.incoming & filters.regex(r'https?://spotify.link[^\s]+'), group=-2)
+@Mbot.on_message(filters.incoming & filters.regex(r'https?://open.spotify.com[^\s]+') | filters.incoming & filters.regex(r'https?://spotify.link[^\s]+'), group=-1)
 async def spotify_dl(Mbot,message: Message):
     if MAIN:
        await message.reply_text(f"Bot Is Under Maintenance ⚠️")
@@ -144,8 +144,9 @@ async def spotify_dl(Mbot,message: Message):
         pass
         chat=message.chat.id
         await Mbot.leave_chat(chat)
-        k = await Mbot.send_message(-1001744816254,f"{chat} {message.chat.username} or {message.from_user.id}")
-        await  k.pin()
+        if BUG:
+           k = await Mbot.send_message(BUG,f"{chat} {message.chat.username} or {message.from_user.id}")
+           await  k.pin()
         sp = f"I have left from {chat} reason: I Am Not  Admin "
         await Mbot.send_message(message.from_user.id,f"{sp}") 
     try:
@@ -203,7 +204,7 @@ async def spotify_dl(Mbot,message: Message):
                 audio["TITLE"] = f" {song.get('name')}"
                 audio["ORIGINALYEAR"] = song.get('year')
                 audio["YEAR_OF_RELEASE"] = song.get('year')
-                audio["WEBSITE"] = "https://t.me/Zpotify1_bot"
+                audio["WEBSITE"] = "https://t.me/z_downloadbot"
                 audio["GEEK_SCORE"] = "9"
                 audio["ARTIST"] = song.get('artist')                                                                            
                 audio["ALBUM"] = song.get('album')
@@ -299,7 +300,7 @@ async def spotify_dl(Mbot,message: Message):
                     audio["TITLE"] = f" {song.get('name')} "
                     audio["ORIGINALYEAR"] = song.get('year')
                     audio["YEAR_OF_RELEASE"] = song.get('year')
-                    audio["WEBSITE"] = "https://t.me/Zpotify1_bot"
+                    audio["WEBSITE"] = "https://t.me/z_downloadbot"
                     audio["GEEK_SCORE"] = "9"
                     audio["ARTIST"] = song.get('artist')                                                                           
                     audio["ALBUM"] = song.get('album')
@@ -378,7 +379,7 @@ async def spotify_dl(Mbot,message: Message):
                     audio["TITLE"] = f" {song.get('name')} "
                     audio["ORIGINALYEAR"] = song.get('year')
                     audio["YEAR_OF_RELEASE"] = song.get('year')
-                    audio["WEBSITE"] = "https://t.me/Zpotify1_bot"
+                    audio["WEBSITE"] = "https://t.me/z_downloadbot"
                     audio["GEEK_SCORE"] = "9"
                     audio["ARTIST"] = song.get('artist')                                                                         
                     audio["ALBUM"] = song.get('album')
@@ -456,7 +457,7 @@ async def spotify_dl(Mbot,message: Message):
                      audio["TITLE"] = f" {song.get('name')}"
                      audio["ORIGINALYEAR"] = song.get('year')
                      audio["YEAR_OF_RELEASE"] = song.get('year')
-                     audio["WEBSITE"] = "https://t.me/Zpotify1_bot"
+                     audio["WEBSITE"] = "https://t.me/z_downloadbot"
                      audio["GEEK_SCORE"] = "9"
                      audio["ARTIST"] = art.get('name')                                                                            
                      audio["ALBUM"] = song.get('album')
@@ -507,8 +508,9 @@ async def spotify_dl(Mbot,message: Message):
         chat=message.chat.id
         try:
             await Mbot.leave_chat(chat)
-            k = await Mbot.send_message(-1001744816254,f"{chat} {message.chat.username} or {message.from_user.id}")
-            await  k.pin()
+            if BUG:
+               k = await Mbot.send_message(BUG,f"{chat} {message.chat.username} or {message.from_user.id}")
+               await  k.pin()
             sp = f"I have left from {chat} reason: I Am Not  Admin "
             await Mbot.send_message(message.from_user.id,f"{sp}")
         except:
@@ -563,7 +565,7 @@ async def spotify_dl(Mbot,message: Message):
         try:
             await message.reply_text(f"Done✅",   
          reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Feedback", callback_data="feed")]]))
-            await message.reply_text(f"Check out @z_downloadbot (music)  @Zpotify1(News)")
+            await message.reply_text(f"Check out our other bots @z_tubedlbot (YouTube)  @Zpotify1(News)")
             await m.delete()
         except:
             pass 
